@@ -4,6 +4,7 @@ $(document).ready(function() {
     $(window).scroll(function() {
         if(this.scrollY > 30) {
             $('.header').addClass("scrolled");
+            
         } else {
             $('.header').removeClass("scrolled");
         }

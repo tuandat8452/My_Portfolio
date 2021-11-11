@@ -16,6 +16,9 @@
         outline: none;
       }
     }
+    .show {
+      margin-top: 2rem;
+    }
     .navbar-collapse {
       .header__navbar {
         display: flex;
@@ -63,11 +66,10 @@
                 }
                 &:hover {
                   color: $primary-color;
-                  transition: color .5s ease-out;
+                  transition: color 0.5s ease-out;
                   &::after {
                     width: 100%;
                     left: 0;
-
                   }
                 }
               }
@@ -92,17 +94,25 @@ header.scrolled {
 }
 
 @media screen and (max-width: 992px) {
-  .header .navbar .navbar-collapse .header__navbar {
-    justify-content: center;
-    text-align: center;
-    .header__logo {
-      display: none;
-    }
-    .header__list {
-      .nav-item {
-        .nav-link {
-          display: inline-block;
-          margin-top: 1rem;
+  .header {
+    .navbar {
+      .show {
+        background-color: rgba(34, 41, 48, 0.49);
+        border-radius: 15px;
+      }
+      .navbar-collapse .header__navbar {
+        justify-content: center;
+        text-align: center;
+        .header__logo {
+          display: none;
+        }
+        .header__list {
+          .nav-item {
+            .nav-link {
+              display: inline-block;
+              margin: 0.8rem;
+            }
+          }
         }
       }
     }
