@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300&family=Patrick+Hand&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hind Madurai', sans-serif;
+    scroll-behavior: smooth;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Patrick Hand', cursive;
+}
+
+a {
+    text-decoration: none;
+    color: $text-color;
+}
+
+
+.to-top {
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    background-color: $primary-color;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 9998;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease;
+}
+
+.to-top.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}

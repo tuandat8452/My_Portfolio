@@ -1,0 +1,110 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: transparent;
+  transition: all 0.3s;
+  padding: 2rem 0;
+  .navbar {
+    color: $text-color;
+    justify-content: flex-end;
+    button {
+      background: $primary-color;
+      &:focus {
+        outline: none;
+      }
+    }
+    .navbar-collapse {
+      .header__navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        .header__logo {
+          a {
+            text-decoration: none;
+            h3 {
+              font-size: 2rem;
+              color: #4eb1ba;
+              margin-bottom: 0;
+              text-transform: uppercase;
+              font-weight: 800;
+              span {
+                color: $text-color;
+                font-weight: normal;
+              }
+            }
+          }
+        }
+        .header__list {
+          .navbar-nav {
+            .nav-item {
+              display: inline-block;
+              margin: 0 1rem;
+              position: relative;
+              a {
+                font-size: 1.25rem;
+                color: $text-color;
+                font-weight: bold;
+                padding: 0 1rem;
+                &::after {
+                  content: "";
+                  display: block;
+                  position: absolute;
+                  left: 50%;
+                  bottom: -4px;
+                  height: 3px;
+                  width: 0;
+                  background: $primary-color;
+                  transition: all 0.3s;
+                  // transform: translateX(-50%);
+                }
+                &:hover {
+                  color: $primary-color;
+                  transition: color .5s ease-out;
+                  &::after {
+                    width: 100%;
+                    left: 0;
+
+                  }
+                }
+              }
+              .active {
+                color: $primary-color;
+                &::after {
+                  left: 0;
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+header.scrolled {
+  background-color: $second-color;
+  padding: 1rem 0;
+}
+
+@media screen and (max-width: 992px) {
+  .header .navbar .navbar-collapse .header__navbar {
+    justify-content: center;
+    text-align: center;
+    .header__logo {
+      display: none;
+    }
+    .header__list {
+      .nav-item {
+        .nav-link {
+          display: inline-block;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}

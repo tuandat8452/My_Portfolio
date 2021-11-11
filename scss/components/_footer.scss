@@ -1,0 +1,17 @@
+.footer {
+    background-color: $second-color;
+    color: $text-color;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem 0;
+   p {
+       margin-bottom: 0;
+       letter-spacing: 4px;
+       font-weight: 500;
+       a {
+           color: $primary-color;
+           text-decoration: none;
+       }
+   }
+   
+}

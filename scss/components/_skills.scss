@@ -1,0 +1,28 @@
+.my__skills {
+  @include title();
+  background-color: $bg-color;
+  padding: 4rem 0 8rem 0;
+  .my__skills__item {
+      margin: 2rem 0;
+     .my__skills__item__content {
+         border: 2px solid #ddd;
+         display: flex;
+         align-items: center;
+         box-shadow: 0 2px 4px 1px rgba(20, 23, 28, .15);
+         border-radius: 15px;
+        i {
+            font-size: 2rem;
+            display: block;
+            padding: 1rem 2rem;
+          }
+          span {
+            font-size: 1rem;
+            display: block;
+          }
+          &:hover {
+            box-shadow: rgba(20, 23, 28, 0.15) 0px 2px 8px 2px;
+        }
+     }
+    
+  }
+}
